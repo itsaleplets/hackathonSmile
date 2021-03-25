@@ -3,12 +3,17 @@ import '../../styles/routes/ProgressBar.css'
 
 export default function ProgressBar({ progress }) {
   const [newColor, setNewColor] = useState('');
+  const [progressColor, setProgressColor] = useState('');
+
 
   useEffect(() => {
     changeColor();
   });
 
   const changeColor = () => {
+    if (progress === 0) {
+      setProgressColor(1.5)
+    }
     if (progress >= 90) {
       return setNewColor('white');
     }
@@ -16,7 +21,7 @@ export default function ProgressBar({ progress }) {
 
   return (
     <div className="progress">
-      <div className="progress-done" style={{ width: `${progress}%`, opacity: 1 }}>
+      <div className="progress-done" style={{ width: `${progressColor}%`}}>
         <span className="progressText" style={{ color: newColor}}>
           {`${progress}%`}
         </span>

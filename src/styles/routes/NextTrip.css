@@ -1,10 +1,9 @@
 .nextTripCosts {
-  /* border: solid 2px green; */
-  /* width: 600px; */
-  /* padding: 5px; */
+  /* border: solid 2px rgb(0, 113, 128); */
+
   display: flex;
-  /* left: -400px; */
-  /* left: 20px; */
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .eachCost {
@@ -18,19 +17,59 @@
 }
 
 .sectionCost {
-  border: solid 2px rgb(189, 102, 21);
+  /* border: solid 2px rgb(189, 102, 21); */
   width: 210px;
 }
 
 .circleProg {
-  border: solid 2px rgb(189, 21, 181);
-  width: 150px;
+  /* border: solid 2px rgb(189, 21, 181); */
+  width: fit-content;
+  margin-left: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 .circleText {
   width: 100px;
+}
+
+.nextTripTitle {
+  text-align: left;
+  margin: 13px 0 0 15px;
+  /* border: solid 2px rgb(189, 21, 181); */
+}
+
+.destiny {
+  font-size: 12px;
+  color: #FF8C20;
+  margin-left: 4px;
+}
+
+.destinyDiv {
+  /* border: solid 2px rgb(24, 23, 24); */
+  display: flex;
+  justify-content: flex-start;
+  align-items:center ;
+  margin: 12px 0 4px 15px;
+}
+
+.nextTripInfo {
+  margin: 5px;
+}
+
+.nextTripLegend {
+  margin-top: 19px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #9092A3;
+}
+
+.line {
+  width: 370px;
+  height: 1px;
+  margin-top: 2px;
+  background-color: #F1F0F1;
 }

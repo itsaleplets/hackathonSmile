@@ -28,23 +28,25 @@ function Home() {
 
   return (
     <div>
-      <p className="bold">Próxima Viagem</p>
-      <img src={location} alt="location icon"/>      
-      <span>DESTINO</span>
-
-      
+      <p className="bold nextTripTitle">Próxima Viagem</p>
+      <div className="destinyDiv">
+        <img src={location} alt="location icon"/>      
+        <span className="destiny">DESTINO</span>
+      </div>
 
       <div className="mainDiv">
-        <div className="sumDiv">
+        <div className="sumDiv nextTripInfo">
           <div className="summary">
             <span className="bold sumTitle">Rio de Janeiro</span> <br/>
-            <p className="size12px weight300">18/10/2021 - Faltam 180 dias</p>
+            <p className="nextTripLegend">18/10/2021 - Faltam 180 dias</p>
           </div>
           <div className="summary">
             <span className="bold sumTitle">R$ 2.500</span>
-            <p className="size12px weight300">Custo total</p>
+            <p className=" nextTripLegend">Custo total</p>
           </div>
         </div>
+
+        <div className="line"></div>
 
         <div className="nextTripCosts">
           
