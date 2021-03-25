@@ -8,7 +8,9 @@
 .bgCircle {
   height: 101.7px;
   width: 101.7px;
+  /* background-color: #e01414; */
   background-color: #F1F1F1;
+  color: #9092A3;
   border-radius: 50%;
   position: absolute;
   top: 5.5px;
@@ -17,7 +19,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .bgCircle p {
