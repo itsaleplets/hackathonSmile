@@ -1,0 +1,26 @@
+.progress {
+  background-color: #F1F0F1;
+  border-radius: 20px;
+  height: 16.5px;
+  width: 184px;
+  position: relative;
+  margin: 5px 0px;
+}
+
+.progress-done {
+	background: #B34DC5;
+	border-radius: 20px;
+	height: 100%;
+	width: 0;
+	/* opacity: 0; */
+	transition: 1s ease;
+}
+
+.progressText {
+  position: absolute;
+  font-size: 12px;
+  z-index: 1;
+  left: 152px;
+  /* top: 0px; */
+  color: #5B5B5B;
+}

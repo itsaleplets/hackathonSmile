@@ -1,0 +1,43 @@
+.radioDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 11px;
+  box-shadow: 0px 1px 3.5px lightgray;
+  padding: 0px 20px;
+  margin-bottom: 25px;
+  height: 120px;
+  width: 290px;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.radioSpan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+
+.radio {
+  filter: grayscale(1);
+}
+
+.goalText {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  width: 230px;
+}
+
+.goalTitle {
+  line-height: 5px;
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 10px;
+  height: 70px;
+}
+
+.goalImg {
+  margin-top: 20px;
+}

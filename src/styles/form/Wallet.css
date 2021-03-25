@@ -1,0 +1,92 @@
+.box {
+  background-color: #FAFAFA;
+  width: 11px;
+  height: 6px;
+}
+
+.topBox {
+  background-color: rgb(242, 245, 246, 0.7);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+  height: 27px;
+}
+
+.rightBox {
+  width: 55px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gradient {
+  background: linear-gradient(110.14deg, #B34DC5 1.89%, #FF8C20 100%);
+  height: 230px;
+  border-radius: 0px 0px 30px 30px;
+  color: white;
+}
+
+.money {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.income {
+  padding-top: 5px;
+  margin-top: 3px;
+  background-color: rgb(91, 91, 91, 0.1);
+  border-radius: 4px;
+  width: 204px;
+  height: 22px;
+}
+
+.totalIncome {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.twelvePx {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 17px 0px 17px;
+}
+
+.btnWallet {
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FFFFFF;
+  width: 170px;
+  height: 34px;
+  background-color: transparent;
+  color: #FFFFFF;
+  outline: none;
+}
+
+.arrow {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.wallet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}

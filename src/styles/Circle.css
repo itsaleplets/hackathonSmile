@@ -1,0 +1,29 @@
+.divCircle {
+  position: relative;
+  width: fit-content;
+  /* border: black solid 2px; */
+  z-index: 100;
+}
+
+.bgCircle {
+  height: 101.7px;
+  width: 101.7px;
+  background-color: #F1F1F1;
+  border-radius: 50%;
+  position: absolute;
+  top: 5.5px;
+  left: 5.5px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.bgCircle p {
+  margin: 2px;
+}
+
+.percent {
+  color: #B34DC5;
+}

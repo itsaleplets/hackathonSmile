@@ -1,0 +1,16 @@
+.searchInput {
+  background-image: url('../../images/icons/search.png');
+  background-position: 255px 10px;
+  background-repeat: no-repeat;
+  margin: 2px 0 10px 0;
+}
+
+.destImg {
+  width: 115px;
+  margin-top: 10px;
+}
+
+.destination{
+  margin-top: 12px;
+  margin-bottom: 8px;
+}

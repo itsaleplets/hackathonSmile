@@ -1,0 +1,41 @@
+.monthlyTitle {
+  width: 300px;
+  margin-bottom: 42px;
+}
+
+.walletBtn {
+  border: none;
+  margin-top: 7px;
+}
+
+.monthlyDiv {
+  width: 350px;
+  height: 204px;
+  border: 1px solid #FF8C20;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.quantity {
+  display: inline-block;
+  border-radius: 4px;
+  width: 160px;
+  height: 26px;
+  font-size: 18px;
+  color: #FF8C20;
+  margin-bottom: 15px;
+  background-color: #5B5B5B;
+}
+
+.tripDetails {
+  font-size: 14px;
+  margin: 7px;
+}
+
+.monthlyText {
+  margin-top: 25px;
+}
+
+.startInvestBtn {
+  margin-top: 55px;
+}

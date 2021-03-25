@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap'); */
+
+* {
+    /* color: #5B5B5B; */
+    /* background-color: palevioletred; */
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}

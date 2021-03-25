@@ -1,0 +1,19 @@
+.dateInput {
+  background-image: url('../../images/icons/calendario_24px.png');
+  background-position: 255px 10px;
+  background-repeat: no-repeat;
+}
+
+.mainImg {
+  margin-top: 12px;
+}
+
+label {
+  align-self: flex-start;
+  font-size: 14px;
+  margin: 23px 0 5px 60px;
+}
+
+.nextBtn {
+  margin-top: 45px;
+}

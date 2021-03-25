@@ -1,0 +1,36 @@
+.nextTripCosts {
+  /* border: solid 2px green; */
+  /* width: 600px; */
+  /* padding: 5px; */
+  display: flex;
+  /* left: -400px; */
+  /* left: 20px; */
+}
+
+.eachCost {
+  width: 180px;
+  /* border: solid 2px rgb(0, 113, 128); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.sectionCost {
+  border: solid 2px rgb(189, 102, 21);
+  width: 210px;
+}
+
+.circleProg {
+  border: solid 2px rgb(189, 21, 181);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleText {
+  width: 100px;
+}

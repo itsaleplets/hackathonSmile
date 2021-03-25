@@ -1,0 +1,65 @@
+.summary {
+  width: fit-content;
+  height: 30px;
+  line-height: 5px;
+  text-align: left;
+  padding: 5px 0px;
+  /* border: solid black 2px; */
+}
+
+.mainImg {
+  margin-top: 0px;
+}
+
+.title {
+  margin-top: 15px;
+  width: 250px;
+}
+
+.sumTitle {
+  font-size: 18px;
+}
+
+.sumDiv {
+  margin-top: 10px;
+  display: flex;
+  width: 370px;
+  justify-content:space-between;
+}
+
+.size12px {
+  font-size: 12px;
+}
+
+.weight300 {
+  font-weight: 400;
+  color: #9092A3;
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.individualCost {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 13px 30px;
+}
+
+.costs {
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px solid #FFEDCE;
+}
+
+.info {
+  margin: -10px 0px 8px -70px;
+  text-align:left;
+  width: 285px;
+}

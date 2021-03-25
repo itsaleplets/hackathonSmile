@@ -1,0 +1,28 @@
+.divInvTitle {
+  margin-top: 33px;
+  margin-bottom: 20px;
+}
+
+.investTitle {
+  margin: 2px;
+  text-align: center;
+  width: 300px;
+}
+
+.investSubTitle {
+  font-size: 18px;
+}
+
+.radioInvest {
+  height: 90px;
+  margin-bottom: 13px;
+}
+
+.investText {
+  width: 260px;
+  font-weight: 300;
+}
+
+.investBtn {
+  margin: 40px;
+}
