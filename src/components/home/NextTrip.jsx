@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useHistory } from 'react-router-dom';
 import '../../styles/form/Wallet.css';
 import '../../styles/routes/NextTrip.css';
 
@@ -12,20 +11,7 @@ import CircleBar from './CircleBar';
 import ProgressBar from './ProgressBar';
 
 
-function Home() {
-  // const history = useHistory();
-
-  // const handleClick = ({ target }) => {
-  //   const { name } = target;
-    
-  //   console.log(name);
-  //   if (name === 'invest') {
-  //     history.push('/invest');
-  //   } else {
-  //     history.push('/withdraw');
-  //   }
-  // }
-
+function NextTrip() {
   return (
     <div>
       <p className="bold nextTripTitle">Próxima Viagem</p>
@@ -99,4 +85,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default NextTrip;
