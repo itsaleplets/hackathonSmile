@@ -5,7 +5,6 @@ export default function ProgressBar({ progress }) {
   const [newColor, setNewColor] = useState('');
   const [progressColor, setProgressColor] = useState('');
 
-
   useEffect(() => {
     changeColor();
   });
@@ -13,6 +12,8 @@ export default function ProgressBar({ progress }) {
   const changeColor = () => {
     if (progress === 0) {
       setProgressColor(1.5)
+    } else {
+      setProgressColor(progress)
     }
     if (progress >= 90) {
       return setNewColor('white');

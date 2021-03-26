@@ -14,7 +14,7 @@ import ProgressBar from './ProgressBar';
 function NextTrip() {
   return (
     <div>
-      <p className="bold nextTripTitle">Próxima Viagem</p>
+      
       <div className="destinyDiv">
         <img src={location} alt="location icon"/>      
         <span className="destiny">DESTINO</span>
@@ -62,7 +62,7 @@ function NextTrip() {
               </div>
               <span className="size12px">R$ 700</span>
             </div>
-            <ProgressBar progress={50}/>
+            <ProgressBar progress={20}/>
 
             <div className="eachCost">
               <div className="ticket size12px bold">
@@ -80,6 +80,8 @@ function NextTrip() {
           </div>
 
         </div>
+        <div className="line"></div>
+        
       </div>
     </div>
   );

@@ -12,7 +12,7 @@
 	background: #B34DC5;
 	border-radius: 20px;
 	height: 100%;
-	/* width: 0; */
+	width: 0;
 	/* opacity: 0; */
 	transition: 1s ease;
 }
