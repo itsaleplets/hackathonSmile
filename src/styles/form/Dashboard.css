@@ -1,0 +1,23 @@
+.dashBg {
+  background-image: url('../../images/cloud.png');
+  height: 40vh;
+  margin-top: 32px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashImg {
+  padding-top: 60px;
+}
+
+.dashLogo {
+  margin-top: 12px;
+}
+
+.dashText {
+  font-weight: 300;
+  color: #9092A3;
+  margin: 0;
+}
