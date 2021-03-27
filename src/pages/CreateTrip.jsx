@@ -9,6 +9,8 @@ import Investment from '../components/form/Investment';
 import TripCost from '../components/form/TripCost';
 import MonthlyInvestment from '../components/form/MonthlyInvestment';
 import ScheduledTrip from '../components/form/ScheduledTrip';
+import TravelerStyle from '../components/form/TravelerStyle';
+
 
 function CreateTrip() {
   const [step, setStep] = useState(0)
@@ -44,17 +46,21 @@ function CreateTrip() {
       )
     case 5:
       return (
-        <Investment prevStep={prevStep} nextStep={nextStep}/>
+        <TravelerStyle  prevStep={prevStep} nextStep={nextStep} />
       )
     case 6:
       return (
-        <TripCost prevStep={prevStep} nextStep={nextStep}/>
+        <Investment prevStep={prevStep} nextStep={nextStep}/>
       )
     case 7:
       return (
-        <MonthlyInvestment prevStep={prevStep} nextStep={nextStep}/>
+        <TripCost prevStep={prevStep} nextStep={nextStep}/>
       )
     case 8:
+      return (
+        <MonthlyInvestment prevStep={prevStep} nextStep={nextStep}/>
+      )
+    case 9:
       return (
         <ScheduledTrip prevStep={prevStep} nextStep={nextStep}/>
       )

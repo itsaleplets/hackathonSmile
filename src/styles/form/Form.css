@@ -5,7 +5,7 @@
   height: 41px;
   background-color: transparent;
   color: #B34DC5;
-  margin-top: 20px;
+  margin: 20px 0px;
   outline: none;
 }
 
@@ -16,7 +16,7 @@
   height: 41px;
   background-color:#B34DC5;
   color: white;
-  margin-top: 20px;
+  margin: 20px 0px;
   outline: none;
   font-weight: bold;
 }
