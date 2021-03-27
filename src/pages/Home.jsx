@@ -5,6 +5,7 @@ import '../styles/routes/Home.css'
 import Wallet from '../components/home/Wallet';
 import NextTrip from '../components/home/NextTrip';
 import Partners from '../components/home/Partners';
+import SmilesClub from '../components/home/SmilesClub';
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
       <p className="bold nextTripTitle">Próxima Viagem</p>
       <NextTrip />
       <h1>My next trips</h1>
+      <SmilesClub />
       <Partners />
     </div>
   );
