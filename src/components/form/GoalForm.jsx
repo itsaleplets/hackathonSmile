@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { travelerAction } from '../../actions/travelerAction';
 import '../../styles/form/Form.css'
@@ -6,10 +6,14 @@ import '../../styles/form/Goal.css'
 import img from '../../images/goal.png'
 import PrevButton from './../sharedComponents/PrevButton';
 
-function GoalForm({ nextStep, prevStep, sendGoal }) {
+function GoalForm({ getName, nextStep, prevStep, sendGoal }) {
   const [isDisable, setIsDisable] = useState(true);
   const [goal, setGoal] = useState(true);
+  const [travelerName, setTravelerName] = useState('Viajante');
 
+  useEffect(() => {
+    setTravelerName(getName[0].name);
+  }, []);
 
   const handleRadio = ({ target }) => {
     const { name, value } = target
@@ -27,14 +31,13 @@ function GoalForm({ nextStep, prevStep, sendGoal }) {
   }
 
   return (
-    
     <div className="bodyForm">
       <PrevButton prevStep={prevStep} />
 
       <img className="goalImg" src={img} alt="girl in purple" />
   
       <div className="goalTitle">
-        <p>Oi, André!</p>
+        <p>{`Oi, ${travelerName}!`}</p>
         <p className="bold">Qual o seu objetivo?</p>
       </div>
 
@@ -88,9 +91,13 @@ function GoalForm({ nextStep, prevStep, sendGoal }) {
 
 const mapDispatchToProps = (dispatch) => ({
   sendGoal: (e) => dispatch(travelerAction(e)),
-})
+});
 
-export default connect(null, mapDispatchToProps)(GoalForm);
+const mapStateToProps = (state) => ({
+  getName: state.travelerReducer.form
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoalForm);
 
 
       

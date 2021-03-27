@@ -1,0 +1,7 @@
+.bgLoading {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../images/loading.png');
+  background-position: 25px;
+  background-repeat: no-repeat;
+}
