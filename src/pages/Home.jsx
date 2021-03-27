@@ -6,6 +6,7 @@ import Wallet from '../components/home/Wallet';
 import NextTrip from '../components/home/NextTrip';
 import Partners from '../components/home/Partners';
 import SmilesClub from '../components/home/SmilesClub';
+import MyNextTrips from '../components/home/MyNextTrips';
 
 function Home() {
 
@@ -14,7 +15,7 @@ function Home() {
       <Wallet />
       <p className="bold nextTripTitle">Próxima Viagem</p>
       <NextTrip />
-      <h1>My next trips</h1>
+      <MyNextTrips />
       <SmilesClub />
       <Partners />
     </div>

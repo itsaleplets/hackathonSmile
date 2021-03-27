@@ -15,6 +15,8 @@ import Loading from '../components/form/Loading';
 
 function CreateTrip() {
   const [step, setStep] = useState(0)
+  const [goal, setGoal] = useState(false)
+
 
   const nextStep = () => {
     setStep(step + 1);
@@ -23,6 +25,13 @@ function CreateTrip() {
   const prevStep = () => {
     setStep(step - 1);
   };
+
+  const chooseGoal = (path) => {
+    console.log(path);
+    if (path === 'investment') {
+      setGoal(true);
+    }
+  }
 
   switch (step) {
     case 0:
@@ -35,7 +44,7 @@ function CreateTrip() {
       )
     case 2:
       return (
-        <GoalForm prevStep={prevStep} nextStep={nextStep} />
+        <GoalForm chooseGoal={chooseGoal} prevStep={prevStep} nextStep={nextStep} />
       )
     case 3:
       return (
@@ -43,7 +52,9 @@ function CreateTrip() {
       )
     case 4:
       return (
-        <TripDate  prevStep={prevStep} nextStep={nextStep} />
+        <div>
+          {goal ? <TripDate  prevStep={prevStep} nextStep={nextStep} /> : <Investment prevStep={prevStep} nextStep={nextStep}/>  }
+        </div>
       )
     case 5:
       return (
@@ -56,19 +67,13 @@ function CreateTrip() {
     
     case 7:
       return (
-        <Investment prevStep={prevStep} nextStep={nextStep}/>
+        <TripCost prevStep={prevStep} nextStep={nextStep}/>
       )
     case 8:
       return (
-        <TripCost prevStep={prevStep} nextStep={nextStep}/>
-      )
-    case 9:
-      return (
-        <MonthlyInvestment prevStep={prevStep} nextStep={nextStep}/>
-      )
-    case 10:
-      return (
-        <ScheduledTrip prevStep={prevStep} nextStep={nextStep}/>
+        <div>
+          {goal ? <MonthlyInvestment prevStep={prevStep} nextStep={nextStep}/> : <ScheduledTrip prevStep={prevStep} nextStep={nextStep}/>  }
+        </div>
       )
     default:
   };

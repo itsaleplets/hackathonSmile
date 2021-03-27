@@ -15,14 +15,14 @@ function NameForm({ nextStep, sendName }) {
       name,
       value,
     }
-    setName(payload)
+    setName(payload);
     setIsDisable(false);
-  }
+  };
 
   const handleClick = () => {
     sendName(name)
     nextStep();
-  }
+  };
 
   return (
     <div className="bodyForm">
@@ -37,16 +37,17 @@ function NameForm({ nextStep, sendName }) {
         onChange={handleInput}
       />
       <button
+        disabled={isDisable}
         className={isDisable ? 'btn nextBtn' : 'abledBtn nextBtn'}
         onClick={handleClick}>
           Próximo
       </button>
     </div>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => ({
   sendName: (e) => dispatch(travelerAction(e)),
-})
+});
 
 export default connect(null, mapDispatchToProps)(NameForm);

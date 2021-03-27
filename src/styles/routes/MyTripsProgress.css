@@ -1,0 +1,16 @@
+.myTripsProgress {
+  background-color: #F1F0F1;
+  border-radius: 20px;
+  height: 15px;
+  width: 171px;
+  position: relative;
+  margin: 10px 0px 17px 0px;
+}
+
+.myTripsProgressText {
+  position: absolute;
+  font-size: 12px;
+  z-index: 1;
+  left: 140px;
+  color: #5B5B5B;
+}

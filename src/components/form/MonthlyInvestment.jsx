@@ -23,7 +23,6 @@ function TripCost({ nextStep, prevStep }) {
   return (
     <div className="body bodyForm">
       <PrevButton prevStep={prevStep} />
-      {/* <h1>tela</h1> */}
       <div className="mainDiv">
         <img
           className="mainImg"
@@ -44,14 +43,6 @@ function TripCost({ nextStep, prevStep }) {
             <span className="bold tripDetails">+ R$ 125,00</span>
           </p>
         </div>
-
-        <button
-          name="teste"
-          className="btn walletBtn"
-          onClick={handleClick}
-        >
-         TESTE
-        </button>
 
         <div className="info size12px weight300">
         (*) Data da última atualização: 05/08/2020

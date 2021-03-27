@@ -6,7 +6,7 @@ import '../../styles/form/Goal.css'
 import img from '../../images/goal.png'
 import PrevButton from './../sharedComponents/PrevButton';
 
-function GoalForm({ getName, nextStep, prevStep, sendGoal }) {
+function GoalForm({ chooseGoal, getName, nextStep, prevStep, sendGoal }) {
   const [isDisable, setIsDisable] = useState(true);
   const [goal, setGoal] = useState(true);
   const [travelerName, setTravelerName] = useState('Viajante');
@@ -26,6 +26,7 @@ function GoalForm({ getName, nextStep, prevStep, sendGoal }) {
   }
 
   const handleClick = () => {
+    chooseGoal(goal.value)
     sendGoal(goal)
     nextStep();
   }
