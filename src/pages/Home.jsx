@@ -17,14 +17,11 @@ function Home() {
     investInfo();
   }, []);
 
-  
   const investInfo = async () => {
     const result = await TripInfo();
     setData(result.response);
-    console.log(result.response);
   };
 
-  console.log(data);
   return (
     <div>
       {data ? <div className="bodyForm">

@@ -10,6 +10,7 @@ import airplane from '../../images/icons/airplane.png';
 import stay from '../../images/icons/stay.png'
 import food from '../../images/icons/food.png'
 import extras from '../../images/icons/extras.png'
+import Loading from './Loading';
 
 function TripCost({ nextStep, prevStep }) {
   const [data, setData] = useState('');
@@ -21,12 +22,10 @@ function TripCost({ nextStep, prevStep }) {
 
     get();
   }, []);
-
   
   const investInfo = async () => {
     const result = await TripInfo();
     setData(result.response);
-    console.log(result.response);
   };
 
   const handleClick = () => {
@@ -34,7 +33,8 @@ function TripCost({ nextStep, prevStep }) {
   }
 
   return (
-    <div className="body bodyForm">
+    <div>
+    {data ? <div className="body bodyForm">
       <PrevButton prevStep={prevStep} />
       <div className="mainDiv">
 
@@ -48,7 +48,7 @@ function TripCost({ nextStep, prevStep }) {
         <div className="sumDiv">
           <div className="summary">
             <span className="bold sumTitle">{data.destination}</span> <br/>
-            <p className="size12px weight300">{`${data.date} - Faltam ${data.remaining_days} dias`}</p>
+            <p className="size12px weight300">{`${data.trip_date} - Faltam ${data.remaining_days} dias`}</p>
           </div>
           <div className="summary">
             <span className="bold sumTitle">{`R$ ${data.total}`}</span>
@@ -102,6 +102,8 @@ function TripCost({ nextStep, prevStep }) {
         </button>
 
       </div> 
+    </div> : <Loading />}
+    
     </div>
   );
 }
@@ -111,4 +113,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(TripCost);
-

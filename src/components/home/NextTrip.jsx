@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import '../../styles/form/Wallet.css';
 import '../../styles/routes/NextTrip.css';
-import { TripInfo } from '../../services/api';
 import airplane from '../../images/icons/airplane.png';
 import stay from '../../images/icons/stay.png';
 import food from '../../images/icons/food.png';
@@ -15,7 +14,6 @@ function NextTrip({ data }) {
 
   return (
     <div>
-      
       <div className="destinyDiv">
         <img src={location} alt="location icon"/>      
         <span className="destiny">DESTINO</span>

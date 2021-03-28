@@ -5,7 +5,7 @@ import PrevButton from './../sharedComponents/PrevButton';
 import { useHistory } from 'react-router-dom';
 import { TripInvestment } from '../../services/api';
 import { connect } from 'react-redux';
-
+import Loading from '../form/Loading';
 import mainImg from '../../images/monthlyInvest.png';
 
 function MonthlyInvestment({ nextStep, prevStep, getData }) {
@@ -39,52 +39,54 @@ function MonthlyInvestment({ nextStep, prevStep, getData }) {
   }
 
   return (
-    <div className="body bodyForm">
-      <PrevButton prevStep={prevStep} />
-      <div className="mainDiv">
-        <img
-          className="mainImg"
-          src={mainImg}
-          alt="pig safe"
-        />
-        <p className="bold monthlyTitle">Aqui o seu dinheiro rende todo dia. Comece agora!</p>
+    <div>
+      {data ? <div className="body bodyForm">
+        <PrevButton prevStep={prevStep} />
+        <div className="mainDiv">
+          <img
+            className="mainImg"
+            src={mainImg}
+            alt="pig safe"
+          />
+          <p className="bold monthlyTitle">Aqui o seu dinheiro rende todo dia. Comece agora!</p>
 
-        <div className="monthlyDiv">
-          <p className="monthlyText">Para esta viagem você precisa investir mensalmente o valor de:</p>
-          <span className="bold quantity">{`R$ ${data.money_month}`}</span>
-          <p className="tripDetails">
-            {`Em ${data.date} você terá: `}
-            <span className="bold tripDetails">{`R$ ${data.money_end}`}</span>
-          </p>
-          <p className="tripDetails">
-            Seu dinheiro irá render:  
-            <span className="bold tripDetails">{`+ R$ ${data.income}`}</span>
-          </p>
-        </div>
+          <div className="monthlyDiv">
+            <p className="monthlyText">Para esta viagem você precisa investir mensalmente o valor de:</p>
+            <span className="bold quantity">{`R$ ${data.money_month},00`}</span>
+            <p className="tripDetails">
+              {`Em ${data.trip_date} você terá: `}
+              <span className="bold tripDetails">{`R$ ${data.money_end},00`}</span>
+            </p>
+            <p className="tripDetails">
+              Seu dinheiro irá render:  
+              <span className="bold tripDetails">{`+ R$ ${data.income},00`}</span>
+            </p>
+          </div>
 
-        <div className="info size12px weight300">
-        {`(*) Data da última atualização: ${data.date_initial}`}
-        </div>
-        <div className="info size12px weight300">
-        (**) Valor de redimento referente a data da última atualização e podem sofrer alterações de acordo com o mercado.
-        </div>
-        
-        <button
-          name="invest"
-          className="abledBtn startInvestBtn"
-          onClick={handleClick}
-        >
-          Começar a investir
-        </button>
-        <button
-          name="home"
-          className="btn walletBtn"
-          onClick={handleClick}
-        >
-          Ir para carteira
-        </button>
+          <div className="info size12px weight300">
+          {`(*) Data da última atualização: ${data.date}`}
+          </div>
+          <div className="info size12px weight300">
+          (**) Valor de redimento referente a data da última atualização e podem sofrer alterações de acordo com o mercado.
+          </div>
+          
+          <button
+            name="invest"
+            className="abledBtn startInvestBtn"
+            onClick={handleClick}
+          >
+            Começar a investir
+          </button>
+          <button
+            name="home"
+            className="btn walletBtn"
+            onClick={handleClick}
+          >
+            Ir para carteira
+          </button>
 
-      </div> 
+        </div> 
+      </div> : <Loading /> }
     </div>
   );
 }

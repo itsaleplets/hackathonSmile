@@ -8,7 +8,7 @@ import rio from '../../images/rio.jpg';
 import barcelona from '../../images/barcelona.jpg';
 import location from '../../images/icons/location.png';
 
-function TripCarousel({ progress, payload }) {
+function TripCarousel({ data }) {
   const history = useHistory();
   
   const handleClick = () => {
@@ -19,7 +19,7 @@ function TripCarousel({ progress, payload }) {
     <div onClick={handleClick} className="myTripsBody">
       <div className="myTrip">
         <img className="myTripImg"
-          src={payload.img === 'rio' ? rio : barcelona}
+          src={data.destination === 'Rio de Janeiro' ? rio : barcelona}
           alt="mountains and sea of Rio de Janeiro"
         />
         <div className="myTripDestiny">
@@ -29,13 +29,13 @@ function TripCarousel({ progress, payload }) {
 
         <div className="myTripDiv">
             <div className="myTripInfo">
-              <p>{payload.title}</p>
-              <p>{payload.value}</p>
+              <p>{data.destination}</p>
+              <p>{data.value}</p>
             </div>
             <div className="myTripInfo"> 
-              <span>{payload.status}</span>
+              <span>{data.status}</span>
             </div>
-            <MyTripsProgress progress={payload.progress}/>
+            <MyTripsProgress progress={data.progress}/>
         </div>
       </div>
     </div>
