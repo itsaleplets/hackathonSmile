@@ -54,15 +54,15 @@ function TripCost({ nextStep, prevStep }) {
             <span className="bold sumTitle">{`R$ ${data.total}`}</span>
             <p className="size12px weight300">Custo total</p>
           </div>
-          
         </div>
+
         <div className="costs">
           <div className="individualCost">
             <div className="ticket size12px bold">
               <img className="icon" src={airplane} alt="airplane icon" />
               <span>Passagens</span>
             </div>
-            <span className="size12px">{`R$ ${data.passagem}`}</span>
+            <span className="size12px price">{`R$ ${data.passagem}`}</span>
           </div>
 
           <div className="individualCost">
@@ -70,7 +70,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={stay} alt="airplane icon" />
               <span>Hospedagem</span>
             </div>
-            <span className="size12px">{`R$ ${data.hospedagem}`}</span>
+            <span className="size12px price">{`R$ ${data.hospedagem}`}</span>
           </div>
 
           <div className="individualCost">
@@ -78,7 +78,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={food} alt="airplane icon" />
               <span>Alimentação</span>
             </div>
-            <span className="size12px">{`R$ ${data.alimentacao}`}</span>
+            <span className="size12px price">{`R$ ${data.alimentacao}`}</span>
           </div>
 
           <div className="individualCost">
@@ -86,7 +86,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={extras} alt="airplane icon" />
               <span>Custo Extra</span>
             </div>
-            <span className="size12px">{`R$ ${data.extra}`}</span>
+            <span className="size12px price">{`R$ ${data.extra}`}</span>
           </div>
         </div>
 

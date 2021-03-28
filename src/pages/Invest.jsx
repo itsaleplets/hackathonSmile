@@ -27,7 +27,7 @@ function Invest({ sendInvestmentType }) {
   }
 
   return (
-    <div className="bodyForm">
+    <div className="body bodyForm">
       <WalletWithoutBtn />
       <div className="mainDiv">
 

@@ -28,7 +28,7 @@ function Withdraw({ sendWithdrawType }) {
   }
 
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <WalletWithoutBtn />
       <div className="mainDiv">
 

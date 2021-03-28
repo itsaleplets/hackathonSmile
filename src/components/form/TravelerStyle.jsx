@@ -30,7 +30,7 @@ function TravelerStyle({ nextStep, prevStep, sendStyle }) {
 
   return (
     
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <PrevButton prevStep={prevStep} />
 
       <img className="styleImg" src={travelerImg} alt="girl in purple" />

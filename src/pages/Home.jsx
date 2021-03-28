@@ -23,7 +23,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="body">
       {data ? <div className="bodyForm">
         <Wallet data={data}/>
         <p className="bold nextTripTitle">Próxima Viagem</p>

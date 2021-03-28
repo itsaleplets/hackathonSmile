@@ -47,7 +47,7 @@ function TripDate({ nextStep, prevStep, sendDate }) {
   }
   
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <PrevButton prevStep={prevStep} />
       <div className="mainDiv">
 

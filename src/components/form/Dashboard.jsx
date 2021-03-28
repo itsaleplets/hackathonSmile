@@ -8,7 +8,7 @@ import purpleLogo from '../../images/purple_logo.png'
 function Dashboard({ nextStep }) {
 
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <div className="dashImg">
         <img  src={graphic_plane} alt="aiplane alongside a growing graphic"/>
         <img className="dashLogo" src={purpleLogo} alt="Trip Invest purple logo"/>

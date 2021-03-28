@@ -32,7 +32,7 @@ function GoalForm({ chooseGoal, getName, nextStep, prevStep, sendGoal }) {
   }
 
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <PrevButton prevStep={prevStep} />
 
       <img className="goalImg" src={img} alt="girl in purple" />

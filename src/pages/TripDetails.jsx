@@ -30,7 +30,7 @@ function TripDetails() {
   };
 
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <div className="imgBackgroung">
         <button
           name="back"

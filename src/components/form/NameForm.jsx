@@ -25,8 +25,7 @@ function NameForm({ nextStep, sendName }) {
   };
 
   return (
-    <div className="bodyForm">
-      
+    <div className="bodyForm body">
       <img className="travelers" src={travelersImg} alt="black woman and white man with luggage"/>
       <p className="nameText">Mas antes do embarque,</p>
       <p className=" nameText bold">como podemos te chamar?</p>

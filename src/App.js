@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Invest from './pages/Invest';
 import Withdraw from './pages/Withdraw';
 import TripDetails from './pages/TripDetails';
+import './App.css'
 
 function App() { 
   return (
@@ -14,7 +15,6 @@ function App() {
         <Route path="/trip-details" component={ TripDetails } />
         <Route path="/invest" component={ Invest } />
         <Route path="/withdraw" component={ Withdraw } />
-
       </Switch>
     </Router>
   );

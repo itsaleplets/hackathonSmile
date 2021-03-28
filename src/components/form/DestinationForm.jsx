@@ -26,7 +26,7 @@ function DestinationForm({ nextStep, prevStep, sendDestination }) {
   }
 
   return (
-    <div className="bodyForm">
+    <div className="bodyForm body">
       <PrevButton prevStep={prevStep} />
 
       <img src={mainImg} alt="eiffel tower in purple" className="destImg" />

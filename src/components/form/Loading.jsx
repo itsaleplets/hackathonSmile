@@ -6,11 +6,11 @@ function Loading({ nextStep }) {
   if(nextStep) {
     setTimeout(() => {
       nextStep();
-    }, 3000);
+    }, 2000);
   }
 
   return (
-    <div className="bgLoading">
+    <div className="body bgLoading">
       <div className="loading"></div>
     </div>
   );
