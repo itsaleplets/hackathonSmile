@@ -31,7 +31,7 @@ function ScheduledTrip({ prevStep, getData }) {
     if (name === 'invest') {
       history.push('/invest');
     } else {
-      history.push('/home');
+      history.push('/');
     }
   }
 

@@ -14,10 +14,9 @@ function MyNextTrips({ data }) {
 
   const Barcelona = {
     destination: 'Barcelona',
-    value: 'R$ 2.000',
+    total: 'R$ 2.000',
     status: 'Concluido',
     progress: 100,
-    img: 'barcelona'
   };
 
   return (

@@ -30,10 +30,11 @@ function TripCarousel({ data }) {
         <div className="myTripDiv">
             <div className="myTripInfo">
               <p>{data.destination}</p>
-              <p>{data.value}</p>
+              <p>{data.total}</p>
             </div>
             <div className="myTripInfo"> 
-              <span>{data.status}</span>
+            {data.destination === 'Rio de Janeiro' ? <span>{`${data.trip_date} - Faltam ${data.remaining_days} dias`}</span> : <span>{data.status}</span>}
+              
             </div>
             <MyTripsProgress progress={data.progress}/>
         </div>
