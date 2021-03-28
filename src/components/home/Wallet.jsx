@@ -11,7 +11,7 @@ function Home({ data }) {
 
   const handleClick = ({ target }) => {
     const { name } = target;
-    
+
     console.log(name);
     if (name === 'invest') {
       history.push('/invest');
@@ -32,12 +32,12 @@ function Home({ data }) {
       </div>
 
       <div className="icons">
-        <img width="89px" src={logo} alt="white trip invest text"/>
-        <FiMenu fontSize="22px"/>
+        <img width="89px" src={logo} alt="white trip invest text" />
+        <FiMenu fontSize="22px" />
       </div>
       <div className="wallet">
         <span className="twelvePx">CARTEIRA</span>
-        <span className="money">{`R$ ${data.wallet},00`}</span>
+        <span className="money">{`R$ ${data.wallet}`}</span>
         <span className="twelvePx income">Seu dinheiro rendeu:<span className="totalIncome">{`+ R$ ${data.income}`}</span></span>
       </div>
 
@@ -47,7 +47,7 @@ function Home({ data }) {
           className="btnWallet"
           onClick={(e) => handleClick(e)}
         >
-          <img className="arrow" src={arrowUp} alt="white arrow up"/>
+          <img className="arrow" src={arrowUp} alt="white arrow up" />
           Investir
         </button>
         <button
@@ -55,11 +55,11 @@ function Home({ data }) {
           className="btnWallet"
           onClick={(e) => handleClick(e)}
         >
-          <img className="arrow" src={arrowDown} alt="white arrow up"/>
+          <img className="arrow" src={arrowDown} alt="white arrow up" />
           Retirar
         </button>
       </div>
-      
+
     </div>
   );
 }

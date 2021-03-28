@@ -19,11 +19,11 @@ export default function CircleBar({ progress }) {
         thickness="2"
         size="7em"
         variant="determinate"
-        value={progress} 
+        value={progress.percent}
       />
       <div className="bgCircle">
-        <p className="bold percent">{`${progress}%`}</p>
-        <p>R$ 1.500</p>
+        <p className="bold percent">{`${progress.percent}%`}</p>
+        <p>{progress.wallet}</p>
       </div>
     </div>
   );

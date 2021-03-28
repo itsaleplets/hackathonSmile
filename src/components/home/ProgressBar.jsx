@@ -17,13 +17,15 @@ export default function ProgressBar({ progress }) {
     }
     if (progress >= 90) {
       return setNewColor('white');
+    } else {
+      return setNewColor('black');
     }
   }
 
   return (
     <div className="progress">
-      <div className="progress-done" style={{ width: `${progressColor}%`}}>
-        <span className="progressText" style={{ color: newColor}}>
+      <div className="progress-done" style={{ width: `${progressColor}%` }}>
+        <span className="progressText" style={{ color: newColor }}>
           {`${progress}%`}
         </span>
       </div>
