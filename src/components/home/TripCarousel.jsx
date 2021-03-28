@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import '../../styles/form/Wallet.css';
 import '../../styles/routes/NextTrip.css';
 import '../../styles/routes/MyNextTrips.css'
@@ -8,14 +9,14 @@ import barcelona from '../../images/barcelona.jpg';
 import location from '../../images/icons/location.png';
 
 function TripCarousel({ progress, payload }) {
-  // const history = useHistory();
+  const history = useHistory();
   
-  // const handleClick = () => {
-  //   history.push('create-trip');
-  // }
+  const handleClick = () => {
+    history.push('/trip-details');
+  };
 
   return (
-    <div className="myTripsBody">
+    <div onClick={handleClick} className="myTripsBody">
       <div className="myTrip">
         <img className="myTripImg"
           src={payload.img === 'rio' ? rio : barcelona}

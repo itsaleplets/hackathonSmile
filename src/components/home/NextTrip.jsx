@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import '../../styles/form/Wallet.css';
 import '../../styles/routes/NextTrip.css';
-
+import { TripInfo } from '../../services/api';
 import airplane from '../../images/icons/airplane.png';
-import stay from '../../images/icons/stay.png'
-import food from '../../images/icons/food.png'
-import extras from '../../images/icons/extras.png'
-import location from '../../images/icons/location.png'
+import stay from '../../images/icons/stay.png';
+import food from '../../images/icons/food.png';
+import extras from '../../images/icons/extras.png';
+import location from '../../images/icons/location.png';
 import CircleBar from './CircleBar';
 import ProgressBar from './ProgressBar';
 
+function NextTrip({ data }) {
 
-function NextTrip() {
   return (
     <div>
       
@@ -24,10 +25,10 @@ function NextTrip() {
         <div className="sumDiv nextTripInfo">
           <div className="summary">
             <span className="bold sumTitle">Rio de Janeiro</span> <br/>
-            <p className="nextTripLegend">18/10/2021 - Faltam 180 dias</p>
+            <p className="nextTripLegend">{`${data.trip_date} - Faltam ${data.remaining_days} dias`}</p>
           </div>
           <div className="summary">
-            <span className="bold sumTitle">R$ 2.500</span>
+            <span className="bold sumTitle">{`R$ ${data.total},00`}</span>
             <p className=" nextTripLegend">Custo total</p>
           </div>
         </div>
@@ -42,7 +43,7 @@ function NextTrip() {
                 <img className="icon" src={airplane} alt="airplane icon" />
                 <span>Passagens</span>
               </div>
-              <span className="size12px">R$ 900</span>
+              <span className="size12px">{`R$ ${data.passagem}`}</span>
             </div>
             <ProgressBar progress={100}/>
 
@@ -51,7 +52,7 @@ function NextTrip() {
                 <img className="icon" src={stay} alt="airplane icon" />
                 <span>Hospedagem</span>
               </div>
-              <span className="size12px">R$ 400</span>
+              <span className="size12px">{`R$ ${data.hospedagem}`}</span>
             </div>
             <ProgressBar progress={100}/>
 
@@ -60,7 +61,7 @@ function NextTrip() {
                 <img className="icon" src={food} alt="airplane icon" />
                 <span>Alimentação</span>
               </div>
-              <span className="size12px">R$ 700</span>
+              <span className="size12px">{`R$ ${data.alimentacao}`}</span>
             </div>
             <ProgressBar progress={20}/>
 
@@ -69,7 +70,7 @@ function NextTrip() {
                 <img className="icon" src={extras} alt="airplane icon" />
                 <span>Custo Extra</span>
               </div>
-              <span className="size12px">R$ 500</span>
+              <span className="size12px">{`R$ ${data.extra}`}</span>
             </div>
             <ProgressBar progress={0}/>
           </section>
@@ -80,7 +81,6 @@ function NextTrip() {
           </div>
 
         </div>
-        {/* <div className="line"></div> */}
         
       </div>
     </div>

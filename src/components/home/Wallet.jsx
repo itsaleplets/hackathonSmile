@@ -6,7 +6,7 @@ import arrowUp from '../../images/icons/arrow_up.png';
 import arrowDown from '../../images/icons/arrow_down.png';
 import { FiMenu } from 'react-icons/fi'
 
-function Home() {
+function Home({ data }) {
   const history = useHistory();
 
   const handleClick = ({ target }) => {
@@ -37,8 +37,8 @@ function Home() {
       </div>
       <div className="wallet">
         <span className="twelvePx">CARTEIRA</span>
-        <span className="money">R$ 1.500,00</span>
-        <span className="twelvePx income">Seu dinheiro rendeu:<span className="totalIncome">+ R$ 25,90</span></span>
+        <span className="money">{`R$ ${data.wallet},00`}</span>
+        <span className="twelvePx income">Seu dinheiro rendeu:<span className="totalIncome">{`+ R$ ${data.income}`}</span></span>
       </div>
 
       <div className="buttons">

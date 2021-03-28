@@ -9,7 +9,7 @@ const travelerReducer = (state = initialState, action) => {
   let { form } = state
   switch (type) {
     case FORM_INPUT:
-      form = [{...form, [payload.name]: payload.value }];
+      form = [...form, {[payload.name]: payload.value} ];
       return {
         ...state,
         form,

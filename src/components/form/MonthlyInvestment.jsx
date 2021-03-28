@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/form/Form.css'
 import '../../styles/form/MonthlyInvestment.css'
 import PrevButton from './../sharedComponents/PrevButton';
 import { useHistory } from 'react-router-dom';
+import { TripInvestment } from '../../services/api';
+import { connect } from 'react-redux';
+
 import mainImg from '../../images/monthlyInvest.png';
 
-function TripCost({ nextStep, prevStep }) {
+function MonthlyInvestment({ nextStep, prevStep, getData }) {
   const history = useHistory();
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    investInfo();
+  }, []);
+
+  
+  const investInfo = async () => {
+    const date = getData[3];
+    const style = getData[4];
+
+    const result = await TripInvestment(style, date);
+    setData(result.response);
+    console.log(result.response);
+  };
 
   const handleClick = ({ target }) => {
     const { name } = target;
@@ -33,19 +51,19 @@ function TripCost({ nextStep, prevStep }) {
 
         <div className="monthlyDiv">
           <p className="monthlyText">Para esta viagem você precisa investir mensalmente o valor de:</p>
-          <span className="bold quantity">R$ 200,00</span>
+          <span className="bold quantity">{`R$ ${data.money_month}`}</span>
           <p className="tripDetails">
-            Em 18/20/2021 você terá: 
-            <span className="bold tripDetails"> R$ 2.625,00</span>
+            {`Em ${data.date} você terá: `}
+            <span className="bold tripDetails">{`R$ ${data.money_end}`}</span>
           </p>
           <p className="tripDetails">
             Seu dinheiro irá render:  
-            <span className="bold tripDetails">+ R$ 125,00</span>
+            <span className="bold tripDetails">{`+ R$ ${data.income}`}</span>
           </p>
         </div>
 
         <div className="info size12px weight300">
-        (*) Data da última atualização: 05/08/2020
+        {`(*) Data da última atualização: ${data.date_initial}`}
         </div>
         <div className="info size12px weight300">
         (**) Valor de redimento referente a data da última atualização e podem sofrer alterações de acordo com o mercado.
@@ -71,4 +89,8 @@ function TripCost({ nextStep, prevStep }) {
   );
 }
 
-export default TripCost;
+const mapStateToProps = (state) => ({
+  getData: state.travelerReducer.form
+});
+
+export default connect(mapStateToProps)(MonthlyInvestment);

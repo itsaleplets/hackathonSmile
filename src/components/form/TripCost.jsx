@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/form/Form.css'
 import '../../styles/form/TripCost.css'
 import PrevButton from './../sharedComponents/PrevButton';
+import { connect } from 'react-redux';
+import { TripInfo } from '../../services/api';
 
 import mainImg from '../../images/cost.png';
 import airplane from '../../images/icons/airplane.png';
@@ -10,6 +12,22 @@ import food from '../../images/icons/food.png'
 import extras from '../../images/icons/extras.png'
 
 function TripCost({ nextStep, prevStep }) {
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    const get = async () => {
+      await investInfo();
+    };
+
+    get();
+  }, []);
+
+  
+  const investInfo = async () => {
+    const result = await TripInfo();
+    setData(result.response);
+    console.log(result.response);
+  };
 
   const handleClick = () => {
     nextStep();
@@ -29,11 +47,11 @@ function TripCost({ nextStep, prevStep }) {
 
         <div className="sumDiv">
           <div className="summary">
-            <span className="bold sumTitle">Rio de Janeiro</span> <br/>
-            <p className="size12px weight300">18/10/2021 - Faltam 180 dias</p>
+            <span className="bold sumTitle">{data.destination}</span> <br/>
+            <p className="size12px weight300">{`${data.date} - Faltam ${data.remaining_days} dias`}</p>
           </div>
           <div className="summary">
-            <span className="bold sumTitle">R$ 2.500</span>
+            <span className="bold sumTitle">{`R$ ${data.total}`}</span>
             <p className="size12px weight300">Custo total</p>
           </div>
           
@@ -44,7 +62,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={airplane} alt="airplane icon" />
               <span>Passagens</span>
             </div>
-            <span className="size12px">R$ 900</span>
+            <span className="size12px">{`R$ ${data.passagem}`}</span>
           </div>
 
           <div className="individualCost">
@@ -52,7 +70,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={stay} alt="airplane icon" />
               <span>Hospedagem</span>
             </div>
-            <span className="size12px">R$ 400</span>
+            <span className="size12px">{`R$ ${data.hospedagem}`}</span>
           </div>
 
           <div className="individualCost">
@@ -60,7 +78,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={food} alt="airplane icon" />
               <span>Alimentação</span>
             </div>
-            <span className="size12px">R$ 700</span>
+            <span className="size12px">{`R$ ${data.alimentacao}`}</span>
           </div>
 
           <div className="individualCost">
@@ -68,7 +86,7 @@ function TripCost({ nextStep, prevStep }) {
               <img className="icon" src={extras} alt="airplane icon" />
               <span>Custo Extra</span>
             </div>
-            <span className="size12px">R$ 500</span>
+            <span className="size12px">{`R$ ${data.extra}`}</span>
           </div>
         </div>
 
@@ -88,4 +106,9 @@ function TripCost({ nextStep, prevStep }) {
   );
 }
 
-export default TripCost;
+const mapStateToProps = (state) => ({
+  getData: state.travelerReducer.form
+});
+
+export default connect(mapStateToProps)(TripCost);
+

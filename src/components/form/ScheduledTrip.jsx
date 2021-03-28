@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/form/Form.css'
 import '../../styles/form/ScheduledTrip.css'
 import PrevButton from './../sharedComponents/PrevButton';
 import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { TripDate } from '../../services/api';
+
 import mainImg from '../../images/date.png';
 
-function ScheduledTrip({ prevStep }) {
+function ScheduledTrip({ prevStep, getData }) {
   const history = useHistory();
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    investInfo();
+  }, []);
+
+  const investInfo = async () => {
+    const investment = getData[3];
+    const style = getData[4];
+
+    // console.log(investment, style);
+    const result = await TripDate(style, investment);
+    setData(result.response);
+    console.log(result.response);
+  };
 
   const handleClick = ({ target }) => {
     const { name } = target;
@@ -31,18 +49,18 @@ function ScheduledTrip({ prevStep }) {
 
         <div className="monthlyDiv">
           <p className="monthlyText">Você poderá viajar a partir de:</p>
-          <span className="bold quantity">18/20/21</span>
+          <span className="bold quantity">{data.date}</span>
           <p className="tripDetails">
           Com investimento mensal de: 
-            <span className="bold tripDetails"> R$ 200,00</span>
+            <span className="bold tripDetails">{` R$ ${data.money_month}`}</span>
           </p>
           <p className="tripDetails">
           Nesta data você terá investido:  
-            <span className="bold tripDetails"> R$ 2.625,00</span>
+            <span className="bold tripDetails">{` R$ ${data.money_end}`}</span>
           </p>
           <p className="tripDetails">
           Seu dinheiro irá render:  
-            <span className="bold tripDetails"> + R$ 125,00</span>
+            <span className="bold tripDetails">{` + R$ ${data.income}`}</span>
           </p>
         </div>
 
@@ -73,4 +91,9 @@ function ScheduledTrip({ prevStep }) {
   );
 }
 
-export default ScheduledTrip;
+
+const mapStateToProps = (state) => ({
+  getData: state.travelerReducer.form
+});
+
+export default connect(mapStateToProps)(ScheduledTrip);
