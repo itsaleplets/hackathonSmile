@@ -1,9 +1,6 @@
 import axios from 'axios';
 
-// const baseUrl = 'http://127.0.0.1:8000';
 const baseUrl = 'http://127.0.0.1:8000';
-
-// http://127.0.0.1:8000/perfil/ 
 
 const TripDate = async (style, value) => axios
   .get(`${baseUrl}/resumo_date`, {
