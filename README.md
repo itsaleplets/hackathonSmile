@@ -1,9 +1,4 @@
 <h1 align="center">
-<!--     <img alt="" title="#delicinha" src="" width="200px" /> -->
-    Trip Invest
-</h1>
-
-<h1 align="center">
     <img alt="DevRadar" title="#delicinha" src="https://github.com/itsaleplets/hackathonSmile/blob/main/src/images/purple_logo.png?raw=true?sanitize=true" width="200px" />
 </h1>
 
