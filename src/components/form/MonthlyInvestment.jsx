@@ -16,7 +16,7 @@ function MonthlyInvestment({ nextStep, prevStep, getData }) {
     investInfo();
   }, []);
 
-  
+
   const investInfo = async () => {
     const date = getData[3];
     const style = getData[4];
@@ -28,7 +28,7 @@ function MonthlyInvestment({ nextStep, prevStep, getData }) {
 
   const handleClick = ({ target }) => {
     const { name } = target;
-    if(name === 'teste') {
+    if (name === 'teste') {
       return nextStep();
     }
     if (name === 'invest') {
@@ -52,24 +52,24 @@ function MonthlyInvestment({ nextStep, prevStep, getData }) {
 
           <div className="monthlyDiv">
             <p className="monthlyText">Para esta viagem você precisa investir mensalmente o valor de:</p>
-            <span className="bold quantity">{`R$ ${data.money_month},00`}</span>
+            <span className="bold quantity">{`R$ ${data.money_month}`}</span>
             <p className="tripDetails">
               {`Em ${data.trip_date} você terá: `}
-              <span className="bold tripDetails">{`R$ ${data.money_end},00`}</span>
+              <span className="bold tripDetails">{`R$ ${data.money_end}`}</span>
             </p>
             <p className="tripDetails">
-              Seu dinheiro irá render:  
-              <span className="bold tripDetails">{`+ R$ ${data.income},00`}</span>
+              Seu dinheiro irá render:
+              <span className="bold tripDetails">{`+ R$ ${data.income}`}</span>
             </p>
           </div>
 
           <div className="info size12px weight300">
-          {`(*) Data da última atualização: ${data.date}`}
+            {`(*) Data da última atualização: ${data.date}`}
           </div>
           <div className="info size12px weight300">
-          (**) Valor de redimento referente a data da última atualização e podem sofrer alterações de acordo com o mercado.
+            (**) Valor de redimento referente a data da última atualização e podem sofrer alterações de acordo com o mercado.
           </div>
-          
+
           <button
             name="invest"
             className="abledBtn startInvestBtn"
@@ -85,8 +85,8 @@ function MonthlyInvestment({ nextStep, prevStep, getData }) {
             Ir para carteira
           </button>
 
-        </div> 
-      </div> : <Loading /> }
+        </div>
+      </div> : <Loading />}
     </div>
   );
 }

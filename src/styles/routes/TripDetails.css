@@ -1,28 +1,28 @@
 .imgBackgroung {
-  width: 400px;
-  height: 210px;
-  /* margin-top: 0px; */
-  background-image: url('../../images/rio.jpg');
-  background-size: 400px;
+    width: 400px;
+    height: 210px;
+    /* margin-top: 0px; */
+    background-image: url('../../images/bahia.jpeg');
+    background-size: 400px;
 }
 
 .btnDetails {
-  margin-left: 3px;
-  padding-top: 10px;
+    margin-left: 3px;
+    padding-top: 10px;
 }
 
 .detailText {
-  font-weight: bold;
-  margin: 0px;
+    font-weight: bold;
+    margin: 0px;
 }
 
 .detailSubText {
-  font-weight: 300;
-  margin: 0px;
-  color: #9092A3;
+    font-weight: 300;
+    margin: 0px;
+    color: #9092A3;
 }
 
 .detailTexts {
-  font-size: 12px;
-  margin-top: 28px;
+    font-size: 12px;
+    margin-top: 28px;
 }

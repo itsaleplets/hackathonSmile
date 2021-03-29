@@ -11,7 +11,7 @@ const TripDate = async (style, value) => axios
   .catch((err) => ({ response: err, result: false }));
 
 const TripInvestment = async (style, date) => axios
-  .get(`${baseUrl}/resumo/8/`, {
+  .get(`${baseUrl}/resumo/10/`, {
     style,
     date
   })
@@ -19,7 +19,7 @@ const TripInvestment = async (style, date) => axios
   .catch((err) => ({ response: err, result: false }));
 
 const TripInfo = async () => axios
-  .get(`${baseUrl}/trip/7/`)
+  .get(`${baseUrl}/trip/8/`)
   .then((res) => ({ response: res.data }))
   .catch((err) => ({ response: err }));
 
