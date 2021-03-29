@@ -16,7 +16,7 @@ function MyNextTrips({ data }) {
     destination: 'Barcelona',
     total: 'R$ 2.000',
     status: 'Concluido',
-    progress: 100,
+    percent: 100,
   };
 
   return (
@@ -24,10 +24,10 @@ function MyNextTrips({ data }) {
       <div className="myTripsTop">
         <h1 className="myTripsTitle">Minhas Viagens</h1>
         <button
-            name="teste"
-            className="btn walletBtn"
-            onClick={handleClick}
-          >
+          name="teste"
+          className="btn walletBtn"
+          onClick={handleClick}
+        >
           Criar Viagem
           </button>
       </div>
@@ -35,7 +35,7 @@ function MyNextTrips({ data }) {
         <TripCarousel data={data} />
         <TripCarousel data={Barcelona} />
       </div>
-      
+
     </div>
   );
 }

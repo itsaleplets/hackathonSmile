@@ -36,8 +36,8 @@ function Home({ data }) {
         <img width="89px" src={logo} alt="white trip invest text" />
         <div className="milhas">
           <span className="miles">
-            <img width="13px" src={coin} alt="orange coins"/>
-            <span>1554</span>
+            <img width="13px" src={coin} alt="orange coins" />
+            <span>{data.milhas}</span>
           </span>
           <p>Saldo de Milhas</p>
         </div>
